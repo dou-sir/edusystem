@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="jit.dyy.edusystem.repository.before.UserFocusRepository">
+
+    <!--获取所有的Course-->
+    <select id="getAllFocusByUserId" resultType="Course" parameterType="int">
+      select ct.course_id,ct.course_name,ct.course_detail,ct.course_link,ct.course_pic,ct.coursetype_id,tt.coursetype_name from tb_focus ft, tb_course ct,tb_coursetype tt
+        where ft.course_id = ct.course_id and ft.user_id = #{arg0} and ct.coursetype_id = tt.coursetype_id
+    </select>
+
+
+    <insert id="focus" parameterType="map">
+        insert into tb_focus(focus_id, course_id, user_id) values (null, #{cid}, #{uid})
+    </insert>
+
+    <select id="isFocus" parameterType="map" resultType="map">
+        select * from tb_focus where course_id=#{cid} and user_id=#{uid}
+    </select>
+
+    <delete id="cancelFocus" parameterType="map" >
+        delete from tb_focus where user_id=#{user_id} and course_id=#{course_id}
+    </delete>
+
+</mapper>
