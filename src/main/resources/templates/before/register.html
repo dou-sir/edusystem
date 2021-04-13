@@ -73,15 +73,15 @@
                 *确认密码：
                 <p><input type="password" name="rebpwd" id="textfield3" placeholder="请确认密码"></p>
                 *验证码：
-                <input type="text" name="code" id="textfield5"/>
+                <p><input type="text" name="code" id="textfield5"/>
                 <img id="code" th:src="@{/validateCode}"/>
                 <a href="javascript:refreshCode();" ><font color="blue">看不清，换一个！</font></a>
-                <br>
+                </p>
                 <p th:text="${codeError}"></p>
                 <p><input type="button" name="button" id="button" onclick="checkForm()" value="完成注册"></p>
                 <p class="txtL">完成此注册，即表明您同意了我们的
                     <a href="#">
-                        <使用条款和隐私策略>
+                        《使用条款和隐私策略》
                     </a></p>
                 <p id="bottom"><a th:href="@{/user/tologin}"><span></span>已有账号登录</a></p>
             </table>

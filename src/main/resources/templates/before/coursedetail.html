@@ -69,7 +69,7 @@
                     document.querySelector('video').load();
                     $.ajax({
                         url: "/edusystem/addHistory",
-                        type: "get",
+                        type: "post",
                         data:{"course_id": [[${course.course_id}]] },
                         dataType: "json",
 

@@ -11,7 +11,7 @@
     </select>
 
     <select id="selectHistory" parameterType="int" resultType="Integer">
-        SELECT COUNT(*) FROM tb_history WHERE user_id=#{arg0} AND course_id=#{arg1}
+        SELECT COUNT(*) FROM tb_history WHERE user_id=#{user_id} AND course_id=#{course_id}
     </select>
 
     <update id="updateHistory" parameterType="History">
