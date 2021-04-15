@@ -149,7 +149,6 @@ public class AdminCourseController {
     //视频上传
     @ResponseBody
     @RequestMapping(value = "/admin/uploadVideo",method = RequestMethod.POST)
-
     public Map uploadVideo(@RequestParam("layuiVideo") MultipartFile[] layuiFile, HttpServletRequest request, HttpServletResponse response){
 //                     log.info("进入wph的layui视频上传接口》》》》》》》》》》》》》》》");
         Map<String,Object> map=new HashMap<>();
