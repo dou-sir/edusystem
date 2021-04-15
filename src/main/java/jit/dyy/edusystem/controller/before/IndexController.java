@@ -18,7 +18,7 @@ public class IndexController {
 
 
 
-    @RequestMapping("/index")
+    @RequestMapping({"/index","/"})//
     public String index(Model model){
         List<CourseType> courseTypeList = courseService.getAllCourseType();
         model.addAttribute("courseTypeList",courseTypeList);

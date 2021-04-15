@@ -106,6 +106,7 @@ public class AdminCourseController {
                 SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd");
                 dateStr = simpleDateFormat.format(date);
                 String filepath = "F:\\pic\\media\\" +uuid+"." + prefix;//真实路径
+//                String filepath = "/data/media/" +uuid+"." + prefix;//真实路径
                 String result  ="/edusystem/"+uuid+"." + prefix;//虚拟路径
                 /*D:\mycode\LayUiTest\src\main\resources\static\images\*/
                 File files=new File(filepath);

@@ -705,7 +705,9 @@ section h3{
 	color: #C10000;
 	text-decoration: underline;
 }
-
+.clear {
+	clear: both;
+}
 .newGoOn{
 	height:500px;
 	line-height:500px;
