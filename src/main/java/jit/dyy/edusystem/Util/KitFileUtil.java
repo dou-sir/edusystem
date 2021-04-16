@@ -22,6 +22,7 @@ public class KitFileUtil {
                  // 文件保存目录路径
 //                String savePath = request.getSession().getServletContext().getRealPath("")  + "/";
                   String savePath = "F:\\pic\\"  ;
+//                String savePath = "/data/" ;
 
                  System.out.println("正确路径："+savePath);
 

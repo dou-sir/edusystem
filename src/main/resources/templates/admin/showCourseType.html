@@ -9,17 +9,17 @@
 </head>
 <body>
 
-    <table id="demo" lay-filter="LAY-table-test"></table>
-    <p id="msg" th:text="${msg}"></p>
+
     <script type="text/html" id="barDemo">
         <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del">删除</a>
     </script>
 
+    <table id="demo" lay-filter="LAY-table-test"></table>
 
 
     <script>
 
-        //商品管理表
+        //类型管理表
         layui.use('table', function(){
             var table = layui.table;
 
@@ -30,7 +30,7 @@
                 ,toolbar: '#toolbarDemo' //开启头部工具栏，并为其绑定左侧模板
                 ,url: '/edusystem/admin/getCourseTypeData' //数据接口
                 ,page: true
-                ,title:"商品管理表"
+                ,title:"类型管理表"
                 ,method:'post'
 
                 ,parseData: function(res){ //将原始数据解析成 table 组件所规定的数据，res为从url中get到的数据

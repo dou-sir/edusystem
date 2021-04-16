@@ -28,8 +28,8 @@ public class AdminTypeController extends BaseController{
         return courseTypeService.addCourseType(courseType, model);
     }
 
-    @RequestMapping( value = "/admin/getCourseTypeData", produces = {"application/json;charset=UTF-8"})
     @ResponseBody
+    @RequestMapping( value = "/admin/getCourseTypeData", produces = {"application/json;charset=UTF-8"})
     public String getCourseTypeData(){
         return courseTypeService.getCourseTypeData();
     }
